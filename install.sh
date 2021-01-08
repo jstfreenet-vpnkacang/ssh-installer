@@ -55,7 +55,7 @@ cp keys/client.key /etc/openvpn
 cp keys/client.crt /etc/openvpn
 cp keys/ta.key /etc/openvpn
 
-echo 'port 1194
+echo 'port 443
 proto tcp
 dev tun
 ca ca.crt
@@ -131,7 +131,9 @@ cd
 echo "client
 dev tun
 proto tcp
-remote $MYIP 1194
+remote $MYIP 443
+http-proxy-retry
+http-proxy $MYIP 8080
 resolv-retry infinite
 route-method exe
 nobind
@@ -147,6 +149,8 @@ echo "client
 dev tun
 proto tcp
 remote $MYIP 9994
+http-proxy-retry
+http-proxy $MYIP 8080
 resolv-retry infinite
 route-method exe
 nobind
@@ -177,6 +181,8 @@ echo "client
 dev tun
 proto tcp
 remote $MYIP 2905
+http-proxy-retry
+http-proxy $MYIP 8080
 resolv-retry infinite
 route-method exe
 nobind
