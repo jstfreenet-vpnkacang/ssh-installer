@@ -244,9 +244,6 @@ echo "</cert>"
 echo "<key>"
 cat "/etc/openvpn/server.key"
 echo "</key>"
-echo "<tls-auth>"
-cat "/etc/openvpn/ta.key"
-echo "</tls-auth>"
 } >>client-tcp-1194.ovpn
 
 {
@@ -259,9 +256,6 @@ echo "</cert>"
 echo "<key>"
 cat "/etc/openvpn/server.key"
 echo "</key>"
-echo "<tls-auth>"
-cat "/etc/openvpn/ta.key"
-echo "</tls-auth>"
 } >>client-tcp-9994.ovpn
 
 {
@@ -274,9 +268,6 @@ echo "</cert>"
 echo "<key>"
 cat "/etc/openvpn/server.key"
 echo "</key>"
-echo "<tls-auth>"
-cat "/etc/openvpn/ta.key"
-echo "</tls-auth>"
 } >>client-ssl-9443.ovpn
 
 {
@@ -289,9 +280,6 @@ echo "</cert>"
 echo "<key>"
 cat "/etc/openvpn/server.key"
 echo "</key>"
-echo "<tls-auth>"
-cat "/etc/openvpn/ta.key"
-echo "</tls-auth>"
 } >>client-ssl-2905.ovpn
 
 {
@@ -319,9 +307,6 @@ echo "</cert>"
 echo "<key>"
 cat "/etc/openvpn/server.key"
 echo "</key>"
-echo "<tls-auth>"
-cat "/etc/openvpn/ta.key"
-echo "</tls-auth>"
 } >>instagram.ovpn
 
 zip client-config.zip client-tcp-1194.ovpn client-tcp-9994.ovpn client-ssl-9443.ovpn client-ssl-2905.ovpn client-udp-25000.ovpn instagram.ovpn
